@@ -1,0 +1,2 @@
+FROM tomcat:alpine
+COPY /target/hello-world-war*.war /usr/local/tomcat/webapps/hello-world-war.war
