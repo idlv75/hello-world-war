@@ -22,8 +22,8 @@
 	<build>
 		<resources>
 			<resource>
-				<directory>src/main/docker</directory>
-				<targetPath>docker</targetPath>
+				<directory>docker</directory>
+				<targetPath>..</targetPath>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
