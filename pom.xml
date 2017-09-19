@@ -27,6 +27,13 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
+		<resources>
+			<resource>
+				<directory>scripts</directory>
+				<targetPath>../scripts</targetPath>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
