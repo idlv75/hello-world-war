@@ -1,2 +1,0 @@
-FROM tomcat:alpine
-COPY target/hello-world-war-@project.version@.war /usr/local/tomcat/webapps/hw.war
