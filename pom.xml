@@ -50,7 +50,7 @@
 				<configuration>
 					<repository>idlv75/test</repository>
 					<tag>${project.version}</tag>
-					<contextDirectory>${project.build.outputDirectory}/docker</contextDirectory>
+					<contextDirectory>${project.build.directory}</contextDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
