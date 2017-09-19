@@ -50,8 +50,10 @@ sudo apt-add-repository ppa:andrei-pozolotin/maven3
 sudo apt-get update
 sudo apt-get install maven3
 ```
-
-
+4. Add user jenkins to docker group:
+```
+usermod -G docker jenkins
+```
 
 
 Jenkins Configuration
