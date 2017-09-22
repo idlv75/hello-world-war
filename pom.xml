@@ -10,6 +10,11 @@
 	<name>Hello World Web Application and CI Flow</name>
 	<description>Simplest possible Java Webapp and CI Flow</description>
 	
+	<scm>
+		<developerConnection>scm:git:https://github.com/idlv75/hello-world-war</developerConnection>
+		<url>https://github.com/idlv75/hello-world-war</url>
+	</scm>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -17,6 +22,8 @@
 		<jetty.maven.plugin.version>8.1.5.v20120716</jetty.maven.plugin.version>
 		<maven.war.plugin.version>2.1.1</maven.war.plugin.version>
 		<dockerfile.maven.plugin.version>1.3.6</dockerfile.maven.plugin.version>
+		<maven.scm.plugin.version>1.9.5</maven.scm.plugin.version>
+		<maven.release.plugin.version>2.5.3</maven.release.plugin.version>
 	</properties>
 
 	<build>
@@ -33,6 +40,20 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
@@ -78,6 +99,16 @@
 					<groupId>com.spotify</groupId>
 					<artifactId>dockerfile-maven-plugin</artifactId>
 					<version>${dockerfile.maven.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>${maven.scm.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${maven.release.plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
