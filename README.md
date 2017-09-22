@@ -58,4 +58,9 @@ usermod -G docker jenkins
 
 Jenkins Configuration
 ===============
-1. Install the _Job DSL Plugin_.
+1. Initialize Jenkins.
+2. Install the following plugins:
+  - _Job DSL Plugin_
+  - _Release Plugin_
+  - _Conditional Buildstep_
+3. Create a Jenkins Job DSL project and

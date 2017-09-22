@@ -11,7 +11,7 @@
 	<description>Simplest possible Java Webapp and CI Flow</description>
 	
 	<scm>
-		<developerConnection>scm:git:https://github.com/idlv75/hello-world-war</developerConnection>
+		<developerConnection>scm:git:ssh://github.com/idlv75/hello-world-war</developerConnection>
 		<url>https://github.com/idlv75/hello-world-war</url>
 	</scm>
 	
@@ -19,7 +19,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- Plugin Versions -->
-		<jetty.maven.plugin.version>8.1.5.v20120716</jetty.maven.plugin.version>
 		<maven.war.plugin.version>2.1.1</maven.war.plugin.version>
 		<dockerfile.maven.plugin.version>1.3.6</dockerfile.maven.plugin.version>
 		<maven.scm.plugin.version>1.9.5</maven.scm.plugin.version>
@@ -54,11 +53,7 @@
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
+ 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
