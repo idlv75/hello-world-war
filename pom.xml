@@ -3,7 +3,7 @@
 	
 	<groupId>com.github.idlv75</groupId>
 	<artifactId>hello-world-war</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
 	<name>Hello World Web Application and CI Flow</name>
