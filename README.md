@@ -1,7 +1,10 @@
-Hello World! (WAR-style)
+Hello World! (Java CI Flow)
 ===============
 
-This is the simplest possible Java webapp for testing servlet container deployments.  It should work on any container and requires no other dependencies or configuration.
+This is a simple Maven project that:
+- builds a WAR file
+- deploys the WAR file to a docker image
+- implements a simple Jenkins DSL Release Flow.
 
 Environment Setup
 ===============
@@ -16,45 +19,39 @@ Environment Setup
 
   3.2 [Configure the "Port Forwarding"](http://www.jhipster.tech/tips/020_tip_using_docker_containers_as_localhost_on_mac_and_windows.html) on the running VM in VirtualBox to expose the required ports for the Docker containers you would launch.
 
-4. Download the official Jenkins image:
-  ```
-  docker pull jenkins/jenkins:lts
-  ```
-5. Launch the Jenkins container:
-  ```
-  docker run --name jenkins -d -p 8090:8080 -p 50000:50000 -v jenkins_home:/var/jenikns_home jenkins/jenkins:lts
-  ```
-Another option is to install Jenkins on the VM. This is more suitable if you want to build docker images:
+4. Install Jenkins on the VM
 
-1. Install JDK 8
+5. Add user jenkins to the docker group:
 ```
-apt-get install software-properties-common python-software-properties
-add-apt-repository ppa:openjdk-r/ppa
-apt-get update
-apt-get install openjdk-8-jdk
+usermod -G docker jenkins
 ```
 
-There is a nasty bug installing JAVA on Ubuntu.
-The fix is simple:
+6. Install JDK 8 (Optional: Configure in Jenkins)
 
-```
-apt-get install --reinstall ca-certificates-java
-update-ca-certificates -f
-```
+  ```
+  apt-get install software-properties-common python-software-properties
+  add-apt-repository ppa:openjdk-r/ppa
+  apt-get update
+  apt-get install openjdk-8-jdk
+  ```
 
-2. Install Jenkins
-3. Install mvn as well
+  There is a nasty bug installing JAVA on Ubuntu 14.04.
+  The fix is simple:
+
+  ```
+  apt-get install --reinstall ca-certificates-java
+  update-ca-certificates -f
+  ```
+
+7. Install Maven (Optional: configure in Jenkins)
 ```
 sudo apt-get purge maven maven2 maven3
 sudo apt-add-repository ppa:andrei-pozolotin/maven3
 sudo apt-get update
 sudo apt-get install maven3
 ```
-4. Add user jenkins to docker group:
-```
-usermod -G docker jenkins
-```
 
+8. [Advanced SSH Configuration](https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login) (In case you need it)
 
 Jenkins Configuration
 ===============
@@ -64,4 +61,4 @@ Jenkins Configuration
   - _Release Plugin_
   - _Conditional Buildstep_
   - _Maven Release Plug-in_
-3. Create a Jenkins Job DSL project and
+3. Create a Jenkins Job DSL project and import a DSL script from the __/dsl__ project directory
