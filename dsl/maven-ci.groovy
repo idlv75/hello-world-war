@@ -1,9 +1,6 @@
 	mavenJob('MavenCI') {
 		logRotator (-1,10)
 		triggers { scm('H/15 * * * *') }
-		trigers {
-			githubPush()
-		}
 		scm {
 			git {
 				remote {
