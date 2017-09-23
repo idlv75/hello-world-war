@@ -57,7 +57,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 			</plugin>
-			<!--plugin>
+			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<executions>
@@ -73,7 +73,7 @@
 					<tag>${project.version}</tag>
 					<contextDirectory>${project.build.directory}</contextDirectory>
 				</configuration>
-			</plugin-->
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
