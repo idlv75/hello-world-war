@@ -109,6 +109,12 @@
 		</pluginManagement>
 	</build>
 	
-	
+	<distributionManagement>
+		<repository>
+			<id>example</id>
+			<name>Example Repository</name>
+			<url>example.com</url>
+		</repository>
+	</distributionManagement>
 
 </project>
