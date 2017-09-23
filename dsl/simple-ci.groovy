@@ -1,5 +1,3 @@
-def gitUrl = 'https://github.com/idlv75/hello-world-war'
-
 job('SimpleCI') {
 	logRotator {
       daysToKeep(-1)
@@ -10,7 +8,7 @@ job('SimpleCI') {
 	}
 	triggers { scm('H/5 * * * *') }
     scm {
-        git(gitUrl)
+        github('idlv75/hello-world-war')
     }
 	steps {
 		conditionalSteps {

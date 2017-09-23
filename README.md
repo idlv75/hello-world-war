@@ -63,4 +63,5 @@ Jenkins Configuration
   - _Job DSL Plugin_
   - _Release Plugin_
   - _Conditional Buildstep_
+  - _Maven Release Plug-in_
 3. Create a Jenkins Job DSL project and
