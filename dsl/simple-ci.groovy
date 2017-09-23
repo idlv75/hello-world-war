@@ -1,4 +1,4 @@
-job('SimpleCI2') {
+job('SimpleCI') {
 	logRotator {
       daysToKeep(-1)
       numToKeep(10)
