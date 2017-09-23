@@ -111,9 +111,9 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>example</id>
-			<name>Example Repository</name>
-			<url>example.com</url>
+			<id>localrepo</id>
+			<name>Local Repository</name>
+			<url>file:///home/jenkins/localrepo</url>
 		</repository>
 	</distributionManagement>
 
