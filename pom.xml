@@ -10,7 +10,7 @@
 	<description>Simplest possible Java Webapp and CI Flow</description>
 	
 	<scm>
-		<developerConnection>scm:git:ssh://github.com/idlv75/hello-world-war</developerConnection>
+		<developerConnection>scm:git:ssh://git@github.com/idlv75/hello-world-war</developerConnection>
 		<url>https://github.com/idlv75/hello-world-war</url>
 	  <tag>v1.0</tag>
   </scm>
